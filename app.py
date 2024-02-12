@@ -1,10 +1,11 @@
 import os
 import sys
 
+@app.route('/')
+def method_name():
+    return "<h1>Construccion</h1>"
 
 sys.path.insert(0, os.path.dirname(__file__))
-
-
 def app(environ, start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     message = 'It works!\n'
