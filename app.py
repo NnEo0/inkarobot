@@ -1,5 +1,9 @@
+from flask import Flask
 import os
 import sys
+
+app=Flask(__name__)
+app.secret_key='tumiaqp'
 
 @app.route('/')
 def method_name():
