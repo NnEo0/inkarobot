@@ -7,7 +7,7 @@ app.secret_key='tumiaqp'
 
 @app.route('/')
 def method_name():
-    return "<h1>Construccion</h1>"
+    return "<h1>Construccion 2</h1>"
 
 if __name__ == "main":
     app.run(debug=True)
