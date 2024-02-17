@@ -1,41 +1,10 @@
-autopep8==2.0.2
-blinker==1.6
-certifi==2023.5.7
-charset-normalizer==3.1.0
-click==8.1.3
-dnspython==2.3.0
-Flask==2.2.3
-Flask-Cors==3.0.10
-Flask-DotEnv==0.1.2
-Flask-Login==0.6.2
-Flask-Mail==0.9.1
-Flask-MySQL==1.5.2
-flask-mysql-connector==1.1.0
-Flask-MySQLdb==1.0.1
-Flask-PyMongo==2.3.0
-Flask-WTF==1.1.1
-idna==3.4
-itsdangerous==2.1.2
-Jinja2==3.1.2
-MarkupSafe==2.1.2
-mysql-client==0.0.1
-mysql-connector==2.2.9
-mysql-connector-python==8.0.32
-mysql-connector-repackaged==0.3.1
-mysqlclient==2.1.1
-numpy==1.24.2
-pandas==2.0.0
-protobuf==3.20.3
-pycodestyle==2.10.0
-pymongo==4.3.3
-PyMySQL==1.0.3
-python-dateutil==2.8.2
-python-dotenv==1.0.0
-pytz==2023.3
-requests==2.31.0
-six==1.16.0
-typing_extensions==4.5.0
-tzdata==2023.3
-urllib3==1.26.7
-Werkzeug==2.2.3
-WTForms==3.0.1
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
