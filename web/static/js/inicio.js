@@ -102,18 +102,14 @@ gltfLoader.load(
     '/static/glb/LogoInkarobot.glb',
     (gltf) => {
         console.log(gltf);
-
         donut = gltf.scene
-
         const radius = 0.04
-
         donut.position.x = 1.5;
 
         donut.rotation.x = Math.PI * 0.3
         donut.rotation.z = Math.PI * 0.15
 
         donut.scale.set(radius, radius, radius)
-
         scene.add(donut)
     },
     (progress) => {
