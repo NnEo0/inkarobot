@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{url_for('static',filename='img/iconotumiaqp.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/iconotumiaqp.png')}}" type="image/x-icon">
     <title>Three.js with Flask</title>
-    <script type="module" src="{{ url_for('static', filename='js/inicio.js') }}"></script>
 </head>
+{% block CustomCss %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/inicio.css')}}">
+{% endblock %}
 <body>
-    <h1>Three.js with Flask</h1>
-    <div id="scene-container"></div>
+    {% block body %}
+        <canvas class="webgl">holas</canvas>
+        <div class="loading-bar"></div>
+        <section class="one">
+            <div class="container">
+                <div class="hero">
+                    <h2>InkaRobot</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        Sed nemo consequuntur quibusdam ipsa nam architecto<br> 
+                        voluptas repellendus in doloribus optio laudantium, itaque <br>
+                        exercitationem soluta maiores molestiae, doloremque assumenda<br> 
+                        facilis ea!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="dos">
+            <div class="container">
+                <div class="hero">
+                    <h2>InkaRobot <span>Listo para crear robots?</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        Sed nemo consequuntur quibusdam ipsa nam architecto<br> 
+                        voluptas repellendus in doloribus optio laudantium, itaque <br>
+                        exercitationem soluta maiores molestiae, doloremque assumenda<br> 
+                        facilis ea!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="tres">
+            <div class="container">
+                <h1>INKAROBOT</h1>
+            </div>
+        </section>
+    {% endblock %}
+{% block js %}
+    <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script type="module" src="{{url_for('static',filename='js/inicio.js')}}"></script>
+{% endblock %}
 </body>
 </html>
